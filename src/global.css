@@ -20,6 +20,7 @@
 /* } */
 html {
   font-size: calc(15px + 0.390625vw);
+  font-family: 'Inter', sans-serif;
 }
 body {
   width: 100%;
@@ -31,8 +32,8 @@ body {
 button {
   cursor: pointer;
 }
-.container {
-  width: 90%;
-  max-width: 1200px;
+.main-container {
+  width: 50%;
   margin: 0 auto;
+  position: relative;
 }
