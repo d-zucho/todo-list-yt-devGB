@@ -1,0 +1,42 @@
+.taskListContainer {
+  width: 100%;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.totalStats,
+.completedStats {
+  font-size: 0.75rem;
+  color: #4ea8de;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.createdTotal,
+.completed {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.completed {
+  color: #8284fa;
+}
+
+.totalTaskNumber,
+.totalCompleted {
+  font-size: 0.65rem;
+  padding: 0.3rem 0.6rem;
+  background-color: #333333;
+  border-radius: 99px;
+  color: #fff;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.totalCompleted {
+  letter-spacing: 1px;
+}

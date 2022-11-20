@@ -1,0 +1,13 @@
+.taskContainer {
+  width: 100%;
+  background-color: #333333;
+  display: flex;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  /* justify-content: space-between; */
+}
+
+.trash {
+  margin-left: auto;
+  width: 1rem;
+}

@@ -1,18 +1,28 @@
-.input-container {
-  display: flex;
-  justify-content: space-evenly;
+.inputFormContainer {
   width: 100%;
-  position: absolute;
-  top: -20px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.inputContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  top: -30px;
+  margin-bottom: 2rem;
 }
 
 .input {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   width: 80%;
   border: none;
   outline: none;
   border-radius: 0.3rem;
-  padding-left: 1rem;
+  padding: 16px 0 16px 16px;
+  background-color: #262626;
+  box-shadow: 2px 2px 8px #000;
+  color: silver;
 }
 
 .createButton {
@@ -20,12 +30,29 @@
   color: #fff;
   border: none;
   outline: none;
-  font-size: 0.75rem;
+  font-size: 0.675rem;
   font-weight: bold;
-  padding: 0.5rem 0.75rem;
+  padding: 16px 24px;
   border-radius: 8px;
   display: inline-flex;
   gap: 0.325rem;
   text-align: center;
   justify-content: space-around;
+  box-shadow: 2px 2px 8px #000;
+  transition: 200ms ease-in-out all;
+}
+
+.createButton:hover {
+  transform: scale(1.05);
+}
+
+.createButton:active {
+  transform: scale(0.93);
+}
+
+.buttonText {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.325rem;
 }
