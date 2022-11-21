@@ -7,7 +7,26 @@
   /* justify-content: space-between; */
 }
 
+.option,
+.trash {
+  cursor: pointer;
+}
+
+.circle,
+.check {
+  width: 1.3rem;
+}
+
+.todoText {
+  margin-left: 2rem;
+  font-size: 0.9rem;
+}
+
 .trash {
   margin-left: auto;
-  width: 1rem;
+  font-size: 1rem;
+}
+
+.strikeOut {
+  text-decoration: line-through;
 }
