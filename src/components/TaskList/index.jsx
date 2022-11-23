@@ -1,8 +1,12 @@
 import styles from './taskList.module.css'
 import Task from '../Task'
+import { useState } from 'react'
 
-const TaskList = ({ todos, setTodos, setCompleted }) => {
+const TaskList = ({ todos, toggleStatus }) => {
   const todoTotal = todos.length
+
+  //* Filter completed tasks
+  const completedTodos = todos.filter((todo) => todo.completed)
 
   return (
     <section className={styles.taskListContainer}>
@@ -15,14 +19,14 @@ const TaskList = ({ todos, setTodos, setCompleted }) => {
 
         <div className={styles.completedStats}>
           <p className={styles.completed}>Completed</p>
-          <span className={styles.totalCompleted}>1 of 2</span>
+          <span className={styles.totalCompleted}>{`1 of ${todoTotal}`}</span>
         </div>
       </header>
       {/* List Header END */}
       {/* List Body */}
       <div className={styles.taskList}>
         {todos.map((todo) => (
-          <Task key={todo.id} text={todo.text} />
+          <Task key={todo.id} toggleStatus={toggleStatus} todo={todo} />
         ))}
       </div>
       {/* List Body -- Tasks */}

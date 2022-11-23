@@ -5,24 +5,6 @@ import TaskList from './components/TaskList'
 import './global.css'
 
 function App() {
-  let tasks = [
-    {
-      id: 1,
-      text: 'Create a new task',
-      completed: false,
-    },
-    {
-      id: 2,
-      text: 'Create a new task',
-      completed: false,
-    },
-    {
-      id: 3,
-      text: 'Create a new task',
-      completed: false,
-    },
-  ]
-
   const [todos, setTodos] = useState([])
   const [isCompleted, setIsCompleted] = useState(false)
 
@@ -38,20 +20,29 @@ function App() {
     ])
   }
 
-  //* change completed state
-  const handleClick = () => {
-    setIsCompleted(!isCompleted)
+  //* Set completed task by id
+  const onToggleTaskStatus = (id) => {
+    const newTodos = todos.map((todo) => {
+      if (todo.id === id) {
+        return {
+          ...todo,
+          completed: !todo.completed,
+        }
+      }
+      return todo
+    })
+    setTodos(newTodos)
   }
 
   return (
     <div className='app-container'>
       <Header />
       <main className='main-container'>
-        <InputBar />
+        <InputBar onAddTodo={addTodo} />
         <TaskList
           todos={todos}
           // setTodos={setTodos}
-          // setCompleted={handleClick}
+          toggleStatus={onToggleTaskStatus}
         />
       </main>
     </div>
